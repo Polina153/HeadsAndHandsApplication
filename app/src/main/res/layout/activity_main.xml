@@ -1,0 +1,135 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/playerHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_health"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toStartOf="@id/monsterHealth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/playerHealthCounterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/playerHealth"
+        app:layout_constraintStart_toStartOf="@id/playerHealth"
+        app:layout_constraintTop_toBottomOf="@id/playerHealth"
+        tools:text="5 health left"
+        />
+
+    <ProgressBar
+        android:id="@+id/playerHealthProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:minWidth="100dp"
+        android:progressTint="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/playerHealthCounterText"
+        app:layout_constraintStart_toStartOf="@id/playerHealthCounterText"
+        app:layout_constraintTop_toBottomOf="@id/playerHealthCounterText"
+        tools:max="10"
+        tools:progress="5"
+        />
+
+    <TextView
+        android:id="@+id/monsterHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/monster_health"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playerHealth"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/monsterHealthCounterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/monsterHealth"
+        app:layout_constraintStart_toStartOf="@id/monsterHealth"
+        app:layout_constraintTop_toBottomOf="@id/monsterHealth"
+        tools:text="5 health left"
+        />
+
+    <ProgressBar
+        android:id="@+id/monsterHealthProgressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:minWidth="100dp"
+        android:progressTint="@color/green"
+        app:layout_constraintEnd_toEndOf="@id/monsterHealthCounterText"
+        app:layout_constraintStart_toStartOf="@id/monsterHealthCounterText"
+        app:layout_constraintTop_toBottomOf="@id/monsterHealthCounterText"
+        tools:max="10"
+        tools:progress="3"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/diceImage"
+        android:layout_width="150dip"
+        android:layout_height="150dip"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="15dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monsterHealthProgressbar"
+        app:srcCompat="@drawable/d6"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/healButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/heal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/attackMonsterButton"
+        app:layout_constraintEnd_toStartOf="@+id/attackMonsterButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/diceImage"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/attackMonsterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/attack_monster"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/healButton"
+        app:layout_constraintTop_toTopOf="@id/healButton"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/attackPlayerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:text="@string/attack_player"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/attackMonsterButton"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

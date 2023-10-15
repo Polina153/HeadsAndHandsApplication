@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HeadsAndHandsApplication</string>
+    <string name="player_health">Player</string>
+    <string name="monster_health">Monster</string>
+    <string name="heal">Heal</string>
+    <string name="attack_monster">Attack monster</string>
+    <string name="attack_player">Attack player</string>
+    <string name="monster_is_dead">Monster is dead!</string>
+    <string name="player_is_dead">Player is dead!</string>
+    <string name="health_left">%d health left</string>
+    <string name="dialog_message">Another round?</string>
+    <string name="dialog_title">End of battle</string>
+    <string name="yes_botton">Yes</string>
+    <string name="no_button">No</string>
+    <string name="player_cant_heal_toast">Player can\'t heal</string>
+</resources>
